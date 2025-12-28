@@ -1,0 +1,43 @@
+services:
+  - type: web
+    name: fifty-backend
+    runtime: node
+    plan: free
+    buildCommand: pnpm install && pnpm build
+    startCommand: pnpm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: VITE_APP_ID
+        sync: false
+      - key: OAUTH_SERVER_URL
+        value: https://api.manus.im
+      - key: VITE_OAUTH_PORTAL_URL
+        sync: false
+      - key: OWNER_OPEN_ID
+        sync: false
+      - key: OWNER_NAME
+        value: Fifty Admin
+      - key: BUILT_IN_FORGE_API_URL
+        value: https://api.manus.im
+      - key: BUILT_IN_FORGE_API_KEY
+        sync: false
+      - key: VITE_FRONTEND_FORGE_API_URL
+        value: https://api.manus.im
+      - key: VITE_FRONTEND_FORGE_API_KEY
+        sync: false
+      - key: VITE_APP_TITLE
+        value: Fifty
+      - key: VITE_APP_LOGO
+        value: /logo.svg
+      - key: PORT
+        value: "3000"
+
+databases:
+  - name: fifty_db
+    databaseName: fifty_production
+    user: fifty_user
+    plan: free

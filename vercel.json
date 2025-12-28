@@ -1,0 +1,36 @@
+{
+  "buildCommand": "pnpm install && pnpm build",
+  "outputDirectory": "dist/public",
+  "installCommand": "pnpm install",
+  "framework": "vite",
+  "env": {
+    "NODE_ENV": "production",
+    "VITE_APP_ID": "@fifty_app_id",
+    "VITE_OAUTH_PORTAL_URL": "@fifty_oauth_url",
+    "VITE_FRONTEND_FORGE_API_URL": "@fifty_api_url",
+    "VITE_FRONTEND_FORGE_API_KEY": "@fifty_api_key",
+    "VITE_APP_TITLE": "Fifty",
+    "VITE_APP_LOGO": "/logo.svg"
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        }
+      ]
+    }
+  ]
+}

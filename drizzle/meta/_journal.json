@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1765007311891,
+      "tag": "0000_good_landau",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1765007361575,
+      "tag": "0001_white_talon",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1766443610173,
+      "tag": "0002_high_squadron_supreme",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1766443714572,
+      "tag": "0003_eager_radioactive_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1766551737049,
+      "tag": "0004_graceful_enchantress",
+      "breakpoints": true
+    }
+  ]
+}
